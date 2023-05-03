@@ -1,0 +1,11 @@
+@use "../../styles/constants" as c;
+@use "../../styles/mixins/" as m;
+
+.wrap {
+  @include m.flex();
+  background-color: c.$C_ORANGE;
+  color: c.$C_WHITE_100;
+  font-size: 12px;
+  padding: 6px;
+  border-radius: 12px;
+}

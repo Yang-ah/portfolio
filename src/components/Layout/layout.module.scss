@@ -1,0 +1,63 @@
+@use "../../styles/constants" as c;
+@use "../../styles/mixins" as m;
+
+.wrap {
+  width: 100%;
+  padding: 20px;
+  color: c.$C_WHITE_100;
+  background-color: c.$C_BLACK;
+
+  > header {
+    @include m.flex(space-between);
+    position: fixed;
+    width: calc(100% - 40px);
+    height: 40px;
+  }
+
+  > footer {
+    @include m.flex(flex-start);
+    height: 40px;
+    font-size: 14px;
+    color: c.$C_WHITE_50;
+  }
+}
+
+.logo {
+  width: 20px;
+  margin-right: 80px;
+  cursor: pointer;
+
+  > svg {
+    fill: c.$C_WHITE_100;
+  }
+}
+
+.nav {
+  @include m.flex(flex-start);
+
+  > button {
+    fill: c.$C_WHITE_100;
+    font-size: 18px;
+    margin-right: 20px;
+    opacity: 0.5;
+    transition: 0.2s opacity ease-in-out;
+    letter-spacing: 0.5px;
+
+    &.selected,
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.contact {
+  font-size: 16px;
+  color: c.$C_ORANGE;
+  letter-spacing: 0.5px;
+}
+
+.main {
+  margin-top: 60px;
+  min-height: calc(100vh - 140px);
+  padding: 20px 40px;
+}
