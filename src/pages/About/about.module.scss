@@ -1,0 +1,83 @@
+@use "../../styles/mixins/" as m;
+@use "../../styles/constants/" as c;
+
+.introduce {
+  @include m.flex(space-between);
+  width: 100%;
+  color: c.$C_WHITE_70;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 60px;
+
+  > .introduceLeft,
+  > .introduceRight {
+    width: 40%;
+    //  border: 1px solid white;
+  }
+}
+
+.introduceLeft {
+  @include m.flex(center, center, column);
+  .profile {
+    @include m.flex();
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: c.$C_WHITE_20;
+
+    > img {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+
+  p {
+    padding: 4px 0;
+  }
+
+  p:first-of-type {
+    font-size: 18px;
+    padding: 20px 0;
+    color: c.$C_WHITE_100;
+    font-weight: 600;
+  }
+}
+
+.introduceRight {
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: c.$C_WHITE_80;
+    padding: 0 4px 2px 0;
+  }
+
+  div {
+    width: 104px;
+  }
+  a {
+    color: c.$C_WHITE_80;
+  }
+
+  > p {
+    @include m.flex(flex-start);
+    height: 24px;
+  }
+
+  .contact {
+    width: 100%;
+    border-top: 0.5px solid c.$C_WHITE_40;
+    margin-top: 20px;
+    padding-top: 20px;
+
+    > p {
+      @include m.flex(flex-start);
+      width: 100%;
+      height: 24px;
+
+      div {
+        width: 40px;
+      }
+    }
+  }
+}
