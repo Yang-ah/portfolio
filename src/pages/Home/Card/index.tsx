@@ -3,16 +3,26 @@ import styles from "./card.module.scss";
 import cx from "classnames";
 
 interface ICard {
-  children: string;
+  children: any;
   project: string;
   title: string;
   className?: string;
   imgSrc: string;
+  tags: string[];
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const Card = ({ title, children, className, imgSrc, project }: ICard) => {
+const Card = ({
+  title,
+  children,
+  className,
+  imgSrc,
+  project,
+  tags,
+  onClick,
+}: ICard) => {
   return (
-    <article className={cx(styles.wrap, className)}>
+    <button className={cx(styles.wrap, className)} onClick={onClick}>
       <div className={styles.imgBox}>
         <img src={imgSrc} />
       </div>
@@ -23,11 +33,12 @@ const Card = ({ title, children, className, imgSrc, project }: ICard) => {
       <p className={styles.description}>{children}</p>
 
       <div className={styles.tagWrap}>
-        <Tag>태그1</Tag>
-        <Tag>태그2</Tag>
-        <Tag>태그3</Tag>
+        {tags &&
+          tags.map((tag, index) => {
+            return <Tag key={tag + index}>{tag}</Tag>;
+          })}
       </div>
-    </article>
+    </button>
   );
 };
 

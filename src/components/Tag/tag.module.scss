@@ -4,8 +4,9 @@
 .wrap {
   @include m.flex();
   background-color: c.$C_ORANGE;
-  color: c.$C_WHITE_100;
+  color: white;
   font-size: 12px;
   padding: 6px;
   border-radius: 12px;
+  font-weight: 600;
 }

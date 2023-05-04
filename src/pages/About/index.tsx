@@ -94,10 +94,7 @@ const About = () => {
               <p>Recoil</p>
             </div>
             <div className={styles.icon}>
-              <img
-                src="https://miro.medium.com/v2/resize:fit:636/format:webp/1*7jRD5QhgARucFKvRHFxpOg.png"
-                alt="styled-component"
-              />
+              <p>💅🏻</p>
               <p>Styled-component</p>
             </div>
           </div>
