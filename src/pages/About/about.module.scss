@@ -1,13 +1,32 @@
 @use "../../styles/mixins/" as m;
 @use "../../styles/constants/" as c;
 
+.introduce,
+.skills {
+  width: 100%;
+  padding: 24px 40px;
+  font-size: 14px;
+  font-weight: 400;
+  color: c.$C_WHITE_70;
+
+  h1,
+  h2 {
+    font-weight: 600;
+    color: c.$C_WHITE_100;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}
+
 .introduce {
   @include m.flex(space-between);
   width: 100%;
-  color: c.$C_WHITE_70;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 60px;
 
   > .introduceLeft,
   > .introduceRight {
@@ -18,9 +37,9 @@
 
 .introduceLeft {
   @include m.flex(center, center, column);
+
   .profile {
     @include m.flex();
-
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -36,32 +55,30 @@
     padding: 4px 0;
   }
 
-  p:first-of-type {
-    font-size: 18px;
+  > h2 {
     padding: 20px 0;
-    color: c.$C_WHITE_100;
-    font-weight: 600;
   }
 }
 
 .introduceRight {
-  svg {
-    width: 20px;
-    height: 20px;
-    fill: c.$C_WHITE_80;
-    padding: 0 4px 2px 0;
-  }
-
-  div {
-    width: 104px;
-  }
-  a {
-    color: c.$C_WHITE_80;
-  }
-
   > p {
     @include m.flex(flex-start);
     height: 24px;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: c.$C_WHITE_90;
+    padding: 0 4px 2px 0;
+  }
+
+  .duration {
+    width: 104px;
+  }
+
+  a {
+    color: c.$C_WHITE_80;
   }
 
   .contact {
@@ -72,12 +89,64 @@
 
     > p {
       @include m.flex(flex-start);
-      width: 100%;
       height: 24px;
 
       div {
         width: 40px;
+        text-align: center;
       }
+    }
+  }
+}
+
+.skills {
+  @include m.flex(space-between, flex-start);
+  padding-top: 100px;
+
+  > article {
+    width: 40%;
+
+    > .iconWrap {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .icon {
+      @include m.flex(flex-start);
+
+      > img {
+        width: 24px;
+        height: 24px;
+      }
+
+      > svg {
+        width: 20px;
+        height: 20px;
+        fill: white;
+      }
+
+      > p {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 4px 0 0 4px;
+        color: c.$C_WHITE_100;
+      }
+
+      &.big {
+        > img {
+          width: 18px;
+          height: 18px;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    > h1 {
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+      border-bottom: 0.5px solid c.$C_WHITE_40;
     }
   }
 }

@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import styles from "./layout.module.scss";
 import { LogoIcon } from "../../assets";
 
@@ -32,7 +32,12 @@ const Layout = () => {
       <main className={styles.main}>
         <Outlet />
       </main>
-      <footer>©2023 Yang-ah. All Rights Reserved.</footer>
+      <footer>
+        <p>©2023 Yang-ah. All Rights Reserved.</p>
+        <Link to="https://github.com/Yang-ah/portfolio">
+          https://github.com/Yang-ah/portfolio
+        </Link>
+      </footer>
     </div>
   );
 };
