@@ -13,7 +13,7 @@ import cx from "classnames";
 
 const About = () => {
   return (
-    <>
+    <main>
       <section className={styles.introduce}>
         <article className={styles.introduceLeft}>
           <div className={styles.profile}>
@@ -122,7 +122,7 @@ const About = () => {
           </div>
         </article>
       </section>
-    </>
+    </main>
   );
 };
 

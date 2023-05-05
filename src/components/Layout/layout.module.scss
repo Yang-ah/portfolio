@@ -3,15 +3,20 @@
 
 .wrap {
   width: 100%;
-  padding: 20px 20px 0 20px;
   color: c.$C_WHITE_100;
   background-color: c.$C_BLACK;
 
   > header {
     @include m.flex(space-between);
     position: fixed;
-    width: calc(100% - 40px);
-    height: 40px;
+    width: 100%;
+    padding: 20px;
+  }
+
+  > main {
+    min-height: calc(100vh - 40px);
+    box-sizing: border-box;
+    padding: 60px 60px 0;
   }
 
   > footer {
@@ -20,6 +25,7 @@
     height: 40px;
     font-size: 10px;
     color: c.$C_WHITE_50;
+
     > a {
       color: c.$C_WHITE_50;
     }
@@ -56,13 +62,7 @@
 
 .contact {
   font-size: 16px;
+  text-align: end;
   color: c.$C_ORANGE;
   letter-spacing: 0.5px;
-}
-
-.main {
-  margin-top: 60px;
-  min-height: calc(100vh - 120px);
-  padding: 20px 40px;
-  box-sizing: border-box;
 }

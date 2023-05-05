@@ -9,7 +9,7 @@ const Layout = () => {
     <div className={styles.wrap}>
       <header>
         <nav className={styles.nav}>
-          <div className={styles.logo}>
+          <div className={styles.logo} onClick={() => navigate("/")}>
             <LogoIcon />
           </div>
           <button name="project" type="button" onClick={() => navigate("/")}>
@@ -29,9 +29,7 @@ const Layout = () => {
           contact
         </button>
       </header>
-      <main className={styles.main}>
-        <Outlet />
-      </main>
+      <Outlet />
       <footer>
         <p>©2023 Yang-ah. All Rights Reserved.</p>
         <Link to="https://github.com/Yang-ah/portfolio">

@@ -6,7 +6,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <section className={styles.wrap}>
+    <main className={styles.wrap}>
       <Card
         project="team"
         title="무비셀렉터"
@@ -35,7 +35,7 @@ const Home = () => {
           미리보기를 할 수 있습니다.
         </p>
       </Card>
-    </section>
+    </main>
   );
 };
 
