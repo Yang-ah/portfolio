@@ -23,9 +23,14 @@ const descriptions = {
      현재, 서버/DB가 존재하지 않아 미리보기만 가능합니다. 추후 서버 개발자와 협업하여 기능 활성화 예정입니다. 
 `,
 
-  search: ``,
-  detail: ``,
-  structure: ``,
+  theme: ``,
+  home: ``,
+  photo: ``,
+  scheduler: ``,
+  diary: ``,
+  sideTracker: ``,
+  tracker: ``,
+  // structure: ``,
 };
 
 const MyFirstDiary = () => {
@@ -50,30 +55,60 @@ const MyFirstDiary = () => {
       </section>
 
       <section className={styles.main}>
-        <h2>검색페이지</h2>
-
-        <article className={styles.searchArticle}>
-          <p>{descriptions.search}</p>
+        <h2>RNV(theme, RNV)</h2>
+        <article className={styles.themeArticle}>
+          <p>{descriptions.theme}</p>
           <div className={styles.videoWrap}>
-            <video src="" autoPlay muted loop />
+            <video src="videos/rnv.mp4" autoPlay muted loop />
           </div>
         </article>
 
-        <h2>상세페이지</h2>
-
-        <article className={styles.detailArticle}>
-          <p>{descriptions.detail}</p>
+        <h2>홈페이지</h2>
+        <article className={styles.homeArticle}>
+          <p>{descriptions.home}</p>
           <div className={styles.videoWrap}>
-            <video src="" autoPlay muted loop />
+            <video src="videos/home.mp4" autoPlay muted loop />
           </div>
         </article>
 
-        <h2>폴더구조</h2>
+        <h2>포토페이지</h2>
+        <article className={styles.photoArticle}>
+          <p>{descriptions.photo}</p>
+          <div className={styles.videoWrap}>
+            <video src="videos/photo.mp4" autoPlay muted loop />
+          </div>
+        </article>
 
-        <article className={styles.folderStructure}>
-          <p>{descriptions.structure}</p>
+        <h2>스케줄러 페이지</h2>
+        <article className={styles.schedulerArticle}>
+          <p>{descriptions.scheduler}</p>
+          <div className={styles.videoWrap}>
+            <video src="videos/scheduler1.mp4" autoPlay muted loop />
+          </div>
+        </article>
 
-          <img src="" />
+        <h2>다이어리 페이지</h2>
+        <article className={styles.diaryArticle}>
+          <p>{descriptions.diary}</p>
+          <div className={styles.videoWrap}>
+            <video src="videos/diary.mp4" autoPlay muted loop />
+          </div>
+        </article>
+
+        <h2>사이드 트래커(스케줄러 & 다이어리 페이지)</h2>
+        <article className={styles.sideTrackerArticle}>
+          <p>{descriptions.sideTracker}</p>
+          <div className={styles.videoWrap}>
+            <video src="videos/sidetracker.mp4" autoPlay muted loop />
+          </div>
+        </article>
+
+        <h2>트래커 페이지</h2>
+        <article className={styles.trackerArticle}>
+          <p>{descriptions.tracker}</p>
+          <div className={styles.videoWrap}>
+            <video src="videos/tracker.mp4" autoPlay muted loop />
+          </div>
         </article>
       </section>
     </>
