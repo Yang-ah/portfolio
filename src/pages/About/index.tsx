@@ -5,15 +5,19 @@ import {
   EducationIcon,
   GithubIcon,
   MailIcon,
-  PhoneIcon,
   ReactIcon,
+  // PhoneIcon,
 } from "../../assets";
 import styles from "./about.module.scss";
 import cx from "classnames";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
     <main>
+      <Helmet>
+        <title>주양아 | About</title>
+      </Helmet>
       <section className={styles.introduce}>
         <article className={styles.introduceLeft}>
           <div className={styles.profile}>
@@ -51,21 +55,18 @@ const About = () => {
           </p>
 
           <div className={styles.contact}>
-            <p>
+            <Link to="https://github.com/Yang-ah" target="_blank">
               <GithubIcon />
-              <div>Github</div>|&nbsp;&nbsp;
-              <Link to="https://github.com/Yang-ah" target="_blank">
-                https://github.com/Yang-ah
-              </Link>
-            </p>
-            <p>
+              <div>Github</div>|&nbsp;&nbsp; https://github.com/Yang-ah
+            </Link>
+            <Link to="mailto:yangah.career@gmail.com">
               <MailIcon />
               <div>Mail</div>| &nbsp;yangah.career@gmail.com
-            </p>
-            <p>
+            </Link>
+            {/* <p>
               <PhoneIcon />
               <div>Phone</div>| &nbsp;010-6367-8340
-            </p>
+            </p>*/}
           </div>
         </article>
       </section>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./movieSelector.module.scss";
 import { GithubIcon, LogoIcon } from "../../assets";
+import { Helmet } from "react-helmet-async";
 
 const links = {
   gitHub: "https://github.com/Yang-ah/select_movie",
@@ -50,6 +51,9 @@ const descriptions = {
 const MovieSelector = () => {
   return (
     <>
+      <Helmet>
+        <title>Project | Movie Selector</title>
+      </Helmet>
       <section className={styles.introduction}>
         <article className={styles.introductionLeft}>
           <h1 className={styles.title}>무비셀렉터</h1>

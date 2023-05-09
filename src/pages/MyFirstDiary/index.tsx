@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./myFirstDiary.module.scss";
 import { GithubIcon, LogoIcon } from "../../assets";
+import { Helmet } from "react-helmet-async";
 
 const links = {
   gitHub: "https://github.com/Yang-ah/my_first_diary",
@@ -95,6 +96,9 @@ const descriptions = {
 const MyFirstDiary = () => {
   return (
     <>
+      <Helmet>
+        <title>Project | My First Diary</title>
+      </Helmet>
       <section className={styles.introduction}>
         <article className={styles.introductionLeft}>
           <h1 className={styles.title}>My First Diary</h1>

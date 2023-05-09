@@ -1,12 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import Card from "./Card";
 import styles from "./home.module.scss";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const navigate = useNavigate();
 
   return (
     <main className={styles.wrap}>
+      <Helmet>
+        <title>주양아 | Project</title>
+      </Helmet>
       <Card
         project="team"
         title="무비셀렉터"

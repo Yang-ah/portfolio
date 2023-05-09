@@ -25,9 +25,9 @@ const Layout = () => {
             About
           </button>
         </nav>
-        <button className={styles.contact} type="button">
+        <Link to="mailto:yangah.career@gmail.com" className={styles.contact}>
           contact
-        </button>
+        </Link>
       </header>
       <Outlet />
       <footer>
